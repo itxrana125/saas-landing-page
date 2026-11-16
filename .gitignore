@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Logs / temp
+*.log
+*.tmp
+~$*

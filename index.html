@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexulo — AI Automation for Small Teams</title>
+  <meta name="description" content="Nexulo is a fictional AI automation platform demo. Connect your tools, describe a workflow in plain language, and let an AI agent run it on schedule." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .hero-glow { background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99, 102, 241, .18), transparent 70%); }
+    .card-hover { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 40px -16px rgba(79, 70, 229, .25); }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-chevron { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="bg-white font-sans text-slate-600 antialiased">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+      <a href="#top" class="flex items-center gap-2 font-display text-lg font-bold text-slate-900">
+        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-violet-500 text-white">⚡</span>
+        Nexulo
+      </a>
+      <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <a href="#features" class="text-slate-600 transition hover:text-brand-600">Features</a>
+        <a href="#how-it-works" class="text-slate-600 transition hover:text-brand-600">How it works</a>
+        <a href="#pricing" class="text-slate-600 transition hover:text-brand-600">Pricing</a>
+        <a href="#faq" class="text-slate-600 transition hover:text-brand-600">FAQ</a>
+      </div>
+      <a href="#pricing" class="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700">
+        Get started
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero-glow relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-5 pb-24 pt-20 text-center sm:px-8 sm:pt-28">
+        <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-500/5 px-4 py-1.5 text-xs font-semibold text-brand-600">
+          <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>
+          Fictional demo product — landing page showcase
+        </span>
+
+        <h1 class="mx-auto mt-8 max-w-3xl font-display text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl">
+          Your busywork,
+          <span class="bg-gradient-to-r from-brand-600 to-violet-500 bg-clip-text text-transparent">automated</span>
+          while you sleep
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-500">
+          Nexulo is an AI automation platform for small teams. Connect your everyday tools,
+          describe what should happen in plain language, and an AI agent runs the workflow for you —
+          on schedule, every time.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="#pricing"
+             class="rounded-full bg-gradient-to-r from-brand-600 to-violet-500 px-8 py-3.5 font-display text-sm font-semibold text-white shadow-lg shadow-brand-500/25 transition hover:shadow-brand-500/40 hover:brightness-110">
+            Start free trial
+          </a>
+          <a href="#how-it-works"
+             class="rounded-full border border-slate-200 bg-white px-8 py-3.5 font-display text-sm font-semibold text-slate-700 transition hover:border-brand-300 hover:text-brand-600">
+            See how it works
+          </a>
+        </div>
+
+        <!-- Product mock (pure CSS/HTML, no external images) -->
+        <div class="mx-auto mt-16 max-w-4xl rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-2xl shadow-slate-200">
+          <div class="rounded-xl border border-slate-100 bg-white p-6 text-left">
+            <div class="flex items-center gap-1.5 border-b border-slate-100 pb-4">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-amber-400"></span>
+              <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+              <span class="ml-3 rounded-md bg-slate-100 px-3 py-1 text-xs text-slate-400">nexulo.app / workflows</span>
+            </div>
+            <div class="mt-5 space-y-3 font-mono text-xs sm:text-sm">
+              <p class="text-slate-400"># Workflow: “Send a friendly invoice reminder every Friday”</p>
+              <p><span class="text-emerald-600 font-semibold">✓</span> <span class="text-slate-600">Agent reads unpaid invoices from your spreadsheet</span></p>
+              <p><span class="text-emerald-600 font-semibold">✓</span> <span class="text-slate-600">Writes a polite, personalised reminder for each one</span></p>
+              <p><span class="text-emerald-600 font-semibold">✓</span> <span class="text-slate-600">Emails them every Friday at 9:00 — no human needed</span></p>
+              <p class="pt-2 text-slate-400"><span class="mr-2 inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-brand-500 align-middle"></span>Next run: Friday 09:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features" class="scroll-mt-20 bg-slate-50/60 py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Features</p>
+          <h2 class="mt-3 font-display text-3xl font-bold text-slate-900 sm:text-4xl">Everything a small team needs</h2>
+          <p class="mt-4 text-slate-500">No code, no servers to manage. You describe the workflow — Nexulo builds and runs it.</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="card-hover rounded-2xl border border-slate-200 bg-white p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/10 text-xl">💬</div>
+            <h3 class="mt-5 font-display text-lg font-semibold text-slate-900">Plain language workflows</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">Type “when a form comes in, summarise it and post it to my channel” — the agent turns it into a working workflow.</p>
+          </div>
+          <div class="card-hover rounded-2xl border border-slate-200 bg-white p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/10 text-xl">🔗</div>
+            <h3 class="mt-5 font-display text-lg font-semibold text-slate-900">Connects your tools</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">Spreadsheets, email, chat apps and webhooks. The agent picks the right connection for each step.</p>
+          </div>
+          <div class="card-hover rounded-2xl border border-slate-200 bg-white p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/10 text-xl">⏰</div>
+            <h3 class="mt-5 font-display text-lg font-semibold text-slate-900">Runs on schedule</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">Every hour, every morning, once a week — set the rhythm and the agent keeps to it.</p>
+          </div>
+          <div class="card-hover rounded-2xl border border-slate-200 bg-white p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/10 text-xl">🧠</div>
+            <h3 class="mt-5 font-display text-lg font-semibold text-slate-900">Smart writing included</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">Emails, summaries and replies are written in your tone, not robot-speak.</p>
+          </div>
+          <div class="card-hover rounded-2xl border border-slate-200 bg-white p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/10 text-xl">🛟</div>
+            <h3 class="mt-5 font-display text-lg font-semibold text-slate-900">Stops when unsure</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">If something looks wrong, the agent pauses and asks you instead of guessing.</p>
+          </div>
+          <div class="card-hover rounded-2xl border border-slate-200 bg-white p-7">
+            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/10 text-xl">📜</div>
+            <h3 class="mt-5 font-display text-lg font-semibold text-slate-900">Full run history</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">Every run is logged step by step, so you can always see exactly what happened.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section id="how-it-works" class="scroll-mt-20 py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">How it works</p>
+          <h2 class="mt-3 font-display text-3xl font-bold text-slate-900 sm:text-4xl">Three steps, five minutes</h2>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <div class="card-hover relative rounded-2xl border border-slate-200 bg-white p-8">
+            <span class="font-display text-5xl font-extrabold text-brand-500/15">1</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">Connect your tools</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">Link the apps you already use. No code, just sign-in screens.</p>
+          </div>
+          <div class="card-hover relative rounded-2xl border border-slate-200 bg-white p-8">
+            <span class="font-display text-5xl font-extrabold text-brand-500/15">2</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">Describe the workflow</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">Write it like you'd explain it to a new teammate. The agent drafts the steps for you.</p>
+          </div>
+          <div class="card-hover relative rounded-2xl border border-slate-200 bg-white p-8">
+            <span class="font-display text-5xl font-extrabold text-brand-500/15">3</span>
+            <h3 class="mt-3 font-display text-lg font-semibold text-slate-900">Turn it on</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-500">Review the draft, set the schedule, and flip the switch. That's the whole job.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section id="pricing" class="scroll-mt-20 bg-slate-50/60 py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Pricing</p>
+          <h2 class="mt-3 font-display text-3xl font-bold text-slate-900 sm:text-4xl">Simple, honest plans</h2>
+          <p class="mt-4 text-slate-500">Start free. Upgrade when your workflows earn it.</p>
+        </div>
+
+        <div class="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-3">
+          <!-- Starter -->
+          <div class="card-hover rounded-2xl border border-slate-200 bg-white p-8">
+            <h3 class="font-display text-lg font-semibold text-slate-900">Starter</h3>
+            <p class="mt-1 text-sm text-slate-400">For trying things out</p>
+            <p class="mt-6 font-display text-4xl font-extrabold text-slate-900">$0<span class="text-base font-semibold text-slate-400">/mo</span></p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-500">
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> 2 active workflows</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> 100 runs / month</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Community support</li>
+            </ul>
+            <a href="#top" class="mt-8 block rounded-xl border border-slate-200 py-3 text-center text-sm font-semibold text-slate-700 transition hover:border-brand-300 hover:text-brand-600">Start free</a>
+          </div>
+
+          <!-- Pro (highlighted) -->
+          <div class="card-hover relative rounded-2xl border-2 border-brand-500 bg-white p-8 shadow-xl shadow-brand-500/10">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-brand-600 to-violet-500 px-4 py-1 text-xs font-semibold text-white">Most popular</span>
+            <h3 class="font-display text-lg font-semibold text-slate-900">Pro</h3>
+            <p class="mt-1 text-sm text-slate-400">For busy small teams</p>
+            <p class="mt-6 font-display text-4xl font-extrabold text-slate-900">$29<span class="text-base font-semibold text-slate-400">/mo</span></p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-500">
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> 25 active workflows</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> 5,000 runs / month</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> All tool connections</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Email support</li>
+            </ul>
+            <a href="#top" class="mt-8 block rounded-xl bg-gradient-to-r from-brand-600 to-violet-500 py-3 text-center text-sm font-semibold text-white transition hover:brightness-110">Start 14-day trial</a>
+          </div>
+
+          <!-- Team -->
+          <div class="card-hover rounded-2xl border border-slate-200 bg-white p-8">
+            <h3 class="font-display text-lg font-semibold text-slate-900">Team</h3>
+            <p class="mt-1 text-sm text-slate-400">For growing companies</p>
+            <p class="mt-6 font-display text-4xl font-extrabold text-slate-900">$79<span class="text-base font-semibold text-slate-400">/mo</span></p>
+            <ul class="mt-6 space-y-3 text-sm text-slate-500">
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Unlimited workflows</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> 25,000 runs / month</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Team workspace &amp; roles</li>
+              <li class="flex gap-2"><span class="text-brand-600">✓</span> Priority support</li>
+            </ul>
+            <a href="#top" class="mt-8 block rounded-xl border border-slate-200 py-3 text-center text-sm font-semibold text-slate-700 transition hover:border-brand-300 hover:text-brand-600">Start 14-day trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" class="scroll-mt-20 py-24">
+      <div class="mx-auto max-w-3xl px-5 sm:px-8">
+        <div class="text-center">
+          <p class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">FAQ</p>
+          <h2 class="mt-3 font-display text-3xl font-bold text-slate-900 sm:text-4xl">Questions, answered</h2>
+        </div>
+
+        <div class="mt-12 space-y-4">
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 open:ring-1 open:ring-brand-200" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-display font-semibold text-slate-900">
+              Do I need to know how to code?
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">No. You describe workflows in plain language, and the agent builds the steps. If you can write a message to a colleague, you can use Nexulo.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 open:ring-1 open:ring-brand-200">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-display font-semibold text-slate-900">
+              What happens if the agent makes a mistake?
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">It pauses and asks you. Every run is logged step by step, so you can review what happened and adjust the workflow in one click.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 open:ring-1 open:ring-brand-200">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-display font-semibold text-slate-900">
+              Can I try it without a credit card?
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">Yes. The Starter plan is free with no card required, and paid trials last 14 days.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-slate-200 bg-white p-6 open:ring-1 open:ring-brand-200">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-display font-semibold text-slate-900">
+              Is Nexulo a real company?
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-500">No — Nexulo is fictional. This page is a front-end design demo built with plain HTML and Tailwind CSS.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="px-5 pb-24 sm:px-8">
+      <div class="mx-auto max-w-5xl overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-500 to-violet-500 px-8 py-16 text-center shadow-2xl shadow-brand-500/30">
+        <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Give your busywork to an agent</h2>
+        <p class="mx-auto mt-4 max-w-xl text-white/80">Set up your first workflow in minutes and take the boring parts off your to-do list.</p>
+        <a href="#top" class="mt-8 inline-block rounded-full bg-white px-8 py-3.5 font-display text-sm font-semibold text-brand-700 shadow-lg transition hover:bg-slate-100">
+          Start free trial
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-100 py-12">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-5 sm:flex-row sm:px-8">
+      <a href="#top" class="flex items-center gap-2 font-display font-bold text-slate-900">
+        <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-violet-500 text-sm text-white">⚡</span>
+        Nexulo
+      </a>
+      <nav class="flex flex-wrap justify-center gap-6 text-sm text-slate-500">
+        <a href="#features" class="transition hover:text-brand-600">Features</a>
+        <a href="#how-it-works" class="transition hover:text-brand-600">How it works</a>
+        <a href="#pricing" class="transition hover:text-brand-600">Pricing</a>
+        <a href="#faq" class="transition hover:text-brand-600">FAQ</a>
+      </nav>
+      <p class="text-xs text-slate-400">© 2026 Nexulo — a fictional demo. Not a real product.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
